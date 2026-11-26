@@ -16,4 +16,5 @@ var Rules = []tflint.Rule{
 	NewScalewayInvalidRegionRule(),
 	NewScalewayObjectBucketInvalidNameRule(),
 	NewScalewayInstanceSecurityGroupInboundDefaultPolicyRule(),
+	NewScalewayRdbInstanceBackupDisabledRule(),
 }

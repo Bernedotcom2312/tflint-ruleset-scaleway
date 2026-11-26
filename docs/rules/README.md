@@ -33,4 +33,5 @@ These rules enforce best practices. They are disabled by default and must be ena
 |Name|Severity|Enabled|
 | --- | --- | --- |
 |[scaleway_instance_security_group_inbound_default_policy](scaleway_instance_security_group_inbound_default_policy.md)|Warning||
+|[scaleway_rdb_instance_backup_disabled](scaleway_rdb_instance_backup_disabled.md)|Warning||
 <!-- best-practices -->
