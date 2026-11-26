@@ -1,0 +1,20 @@
+version: 2
+updates:
+- package-ecosystem: gomod
+  commit-message:
+    prefix: "build(deps)"
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  cooldown:
+    default-days: 5
+
+- package-ecosystem: github-actions
+  commit-message:
+    prefix: "ci(deps)"
+  directory: "/"
+  schedule:
+    interval: weekly
+  cooldown:
+    default-days: 5
