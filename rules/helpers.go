@@ -41,3 +41,23 @@ func checkStringAttribute(
 
 	return nil
 }
+
+// evaluateString evaluates attribute as a string. known is false when the
+// value cannot be determined statically (unknown, null, sensitive...).
+func evaluateString(runner tflint.Runner, attribute *hclext.Attribute) (value string, known bool, err error) {
+	err = runner.EvaluateExpr(attribute.Expr, func(v string) error {
+		value, known = v, true
+		return nil
+	}, nil)
+	return value, known, err
+}
+
+// evaluateInt evaluates attribute as an integer. known is false when the
+// value cannot be determined statically.
+func evaluateInt(runner tflint.Runner, attribute *hclext.Attribute) (value int, known bool, err error) {
+	err = runner.EvaluateExpr(attribute.Expr, func(v int) error {
+		value, known = v, true
+		return nil
+	}, nil)
+	return value, known, err
+}

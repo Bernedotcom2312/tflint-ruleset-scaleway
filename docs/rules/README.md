@@ -32,3 +32,4 @@ These rules enforce best practices. They are disabled by default and must be ena
 | --- | --- | --- |
 |[scaleway_instance_security_group_inbound_default_policy](scaleway_instance_security_group_inbound_default_policy.md)|Warning||
 |[scaleway_rdb_instance_backup_disabled](scaleway_rdb_instance_backup_disabled.md)|Warning||
+|[scaleway_instance_security_group_admin_port_exposed](scaleway_instance_security_group_admin_port_exposed.md)|Warning||
