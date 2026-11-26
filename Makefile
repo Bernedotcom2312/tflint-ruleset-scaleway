@@ -1,7 +1,7 @@
 PLUGIN_NAME := tflint-ruleset-scaleway
 PLUGIN_DIR  := $(HOME)/.tflint.d/plugins
 
-.PHONY: default test e2e build install fmt vet
+.PHONY: default test e2e build install fmt vet catalog
 
 default: build
 
@@ -24,3 +24,8 @@ fmt:
 vet:
 	go vet ./...
 
+
+# Refresh rules/models/catalog.go from the Scaleway API.
+# Requires SCW_SECRET_KEY to be set.
+catalog:
+	go run ./tools/catalog -output rules/models/catalog.go
