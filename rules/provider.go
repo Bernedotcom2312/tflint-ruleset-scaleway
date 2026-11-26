@@ -7,4 +7,5 @@ import "github.com/terraform-linters/tflint-plugin-sdk/tflint"
 var Rules = []tflint.Rule{
 	NewScalewayInstanceServerInvalidTypeRule(),
 	NewScalewayK8sPoolInvalidNodeTypeRule(),
+	NewScalewayRdbInstanceInvalidNodeTypeRule(),
 }
