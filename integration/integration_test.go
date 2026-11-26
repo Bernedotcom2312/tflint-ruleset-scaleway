@@ -1,5 +1,5 @@
-// Package integration runs TFLint with the installed plugin against sample
-// configurations. Run it with `make install e2e`.
+//go:build e2e
+
 package integration
 
 import (

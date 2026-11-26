@@ -6,10 +6,10 @@ PLUGIN_DIR  := $(HOME)/.tflint.d/plugins
 default: build
 
 test:
-	go test $$(go list ./... | grep -v /integration)
+	go test ./...
 
 e2e:
-	cd integration && go test -count=1 ./...
+	go test -tags e2e -count=1 ./integration/...
 
 build:
 	go build
