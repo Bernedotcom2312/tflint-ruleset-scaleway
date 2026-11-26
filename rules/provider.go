@@ -20,4 +20,5 @@ var Rules = []tflint.Rule{
 	NewScalewayInstanceSecurityGroupAdminPortExposedRule(),
 	NewScalewayRdbInstancePublicEndpointRule(),
 	NewScalewayRedisClusterPublicEndpointRule(),
+	NewScalewayRdbInstanceEncryptionAtRestDisabledRule(),
 }
