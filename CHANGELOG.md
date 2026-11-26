@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file. The format is b
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-26
+
 ### Added
 
 - Possible error rules, enabled by default:
@@ -31,3 +33,6 @@ All notable changes to this project are documented in this file. The format is b
   - `scaleway_resource_missing_tags`
 - Coverage of the Landing Zone Framework in `docs/landing-zone.md`.
 - `tools/catalog` to refresh the Scaleway catalog from the API.
+
+[Unreleased]: https://github.com/Bernedotcom2312/tflint-ruleset-scaleway/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/Bernedotcom2312/tflint-ruleset-scaleway/releases/tag/v0.1.0
