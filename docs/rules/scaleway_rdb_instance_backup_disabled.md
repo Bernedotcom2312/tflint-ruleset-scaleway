@@ -37,7 +37,7 @@ Reference: https://github.com/Bernedotcom2312/tflint-ruleset-scaleway/blob/v0.1.
 
 ## Why
 
-Without automated backups, a deleted table, a failed migration or a deleted Instance cannot be restored from a recent point in time.
+Without automated backups, a deleted table, a failed migration or a deleted Instance cannot be restored from a recent point in time. The Scaleway Landing Zone Framework requires database backups to be enabled at creation time, with no possibility of omission, at least daily.
 
 ## How To Fix
 

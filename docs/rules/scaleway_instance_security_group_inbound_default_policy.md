@@ -39,7 +39,7 @@ Reference: https://github.com/Bernedotcom2312/tflint-ruleset-scaleway/blob/v0.1.
 
 ## Why
 
-`inbound_default_policy` defaults to `accept`: every port that no `inbound_rule` drops is reachable. In the example above, the `accept` rule on port 443 has no effect and SSH, databases or any other listening service stay exposed.
+The Scaleway Landing Zone Framework asks for a default-deny policy on all inbound traffic. While security groups created in the console drop inbound traffic by default, the Terraform provider defaults `inbound_default_policy` to `accept`: every port that no `inbound_rule` drops is reachable. In the example above, the `accept` rule on port 443 has no effect and SSH, databases or any other listening service stay exposed.
 
 ## How To Fix
 
