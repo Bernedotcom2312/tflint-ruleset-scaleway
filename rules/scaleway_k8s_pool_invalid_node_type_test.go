@@ -73,16 +73,6 @@ resource "scaleway_k8s_pool" "main" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "value" {}
-
-resource "scaleway_k8s_pool" "main" {
-  node_type = var.value
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayK8sPoolInvalidNodeTypeRule()

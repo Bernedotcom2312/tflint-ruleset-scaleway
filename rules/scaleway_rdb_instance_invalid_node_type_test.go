@@ -73,16 +73,6 @@ resource "scaleway_rdb_instance" "main" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "value" {}
-
-resource "scaleway_rdb_instance" "main" {
-  node_type = var.value
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayRdbInstanceInvalidNodeTypeRule()

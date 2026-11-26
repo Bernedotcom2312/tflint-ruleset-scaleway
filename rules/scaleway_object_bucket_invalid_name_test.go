@@ -135,16 +135,6 @@ resource "scaleway_object_bucket" "main" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "suffix" {}
-
-resource "scaleway_object_bucket" "main" {
-  name = "logs-${var.suffix}"
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayObjectBucketInvalidNameRule()

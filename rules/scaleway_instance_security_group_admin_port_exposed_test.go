@@ -224,21 +224,6 @@ rule "scaleway_instance_security_group_admin_port_exposed" {
 				},
 			},
 		},
-		{
-			Name: "unknown values are ignored",
-			Content: `
-variable "port" {}
-
-resource "scaleway_instance_security_group" "main" {
-  inbound_default_policy = "drop"
-
-  inbound_rule {
-    action = "accept"
-    port   = var.port
-  }
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayInstanceSecurityGroupAdminPortExposedRule()

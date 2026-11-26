@@ -63,16 +63,6 @@ resource "scaleway_instance_security_group" "main" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "policy" {}
-
-resource "scaleway_instance_security_group" "main" {
-  inbound_default_policy = var.policy
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayInstanceSecurityGroupInboundDefaultPolicyRule()

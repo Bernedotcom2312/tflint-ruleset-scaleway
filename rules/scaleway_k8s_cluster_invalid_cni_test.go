@@ -89,16 +89,6 @@ resource "scaleway_k8s_cluster" "main" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "value" {}
-
-resource "scaleway_k8s_cluster" "main" {
-  cni = var.value
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayK8sClusterInvalidCNIRule()

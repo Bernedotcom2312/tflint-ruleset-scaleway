@@ -65,16 +65,6 @@ resource "scaleway_redis_cluster" "main" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "value" {}
-
-resource "scaleway_redis_cluster" "main" {
-  node_type = var.value
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayRedisClusterInvalidNodeTypeRule()

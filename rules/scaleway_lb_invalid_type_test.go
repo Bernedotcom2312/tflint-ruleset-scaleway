@@ -65,16 +65,6 @@ resource "scaleway_lb" "main" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "value" {}
-
-resource "scaleway_lb" "main" {
-  type = var.value
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayLBInvalidTypeRule()

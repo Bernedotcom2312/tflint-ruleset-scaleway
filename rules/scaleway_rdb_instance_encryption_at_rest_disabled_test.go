@@ -59,16 +59,6 @@ resource "scaleway_rdb_instance" "main" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "encryption" {}
-
-resource "scaleway_rdb_instance" "main" {
-  encryption_at_rest = var.encryption
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayRdbInstanceEncryptionAtRestDisabledRule()

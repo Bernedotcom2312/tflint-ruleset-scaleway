@@ -88,16 +88,6 @@ provider "aws" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "region" {}
-
-provider "scaleway" {
-  region = var.region
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayInvalidRegionRule()

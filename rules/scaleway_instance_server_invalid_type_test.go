@@ -73,16 +73,6 @@ resource "scaleway_instance_server" "main" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "value" {}
-
-resource "scaleway_instance_server" "main" {
-  type = var.value
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayInstanceServerInvalidTypeRule()

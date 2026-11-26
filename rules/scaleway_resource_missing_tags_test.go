@@ -152,21 +152,6 @@ resource "scaleway_instance_server" "web" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown tags are ignored",
-			Content: `
-variable "tags" {}
-
-resource "scaleway_instance_server" "web" {
-  tags = var.tags
-}`,
-			Config: `
-rule "scaleway_resource_missing_tags" {
-  enabled = true
-  tags    = ["env", "owner"]
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayResourceMissingTagsRule()

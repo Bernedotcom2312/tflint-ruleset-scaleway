@@ -92,6 +92,11 @@ func TestIntegration(t *testing.T) {
 				{"scaleway_iam_policy_full_access", "warning", "AllProductsFullAccess grants every permission on every product. Use product-specific permission sets, such as InstancesFullAccess.", "main.tf", 79, 28},
 			},
 		},
+		{
+			Name:     "unknown values are ignored",
+			Dir:      "unknown-values",
+			Expected: []expectedIssue{},
+		},
 	}
 
 	for _, tc := range cases {

@@ -110,16 +110,6 @@ resource "google_compute_instance" "main" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "zone" {}
-
-resource "scaleway_instance_server" "main" {
-  zone = var.zone
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayInvalidZoneRule()

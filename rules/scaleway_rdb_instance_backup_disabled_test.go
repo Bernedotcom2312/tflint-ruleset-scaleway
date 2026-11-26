@@ -57,16 +57,6 @@ resource "scaleway_rdb_instance" "main" {
 }`,
 			Expected: helper.Issues{},
 		},
-		{
-			Name: "unknown value is ignored",
-			Content: `
-variable "disable_backup" {}
-
-resource "scaleway_rdb_instance" "main" {
-  disable_backup = var.disable_backup
-}`,
-			Expected: helper.Issues{},
-		},
 	}
 
 	rule := NewScalewayRdbInstanceBackupDisabledRule()
