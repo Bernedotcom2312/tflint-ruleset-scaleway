@@ -76,6 +76,22 @@ func TestIntegration(t *testing.T) {
 				{"scaleway_rdb_instance_backup_disabled", "warning", "Automated backups are disabled for this Database Instance.", "main.tf", 24, 20},
 			},
 		},
+		{
+			Name: "landing zone rules enabled in .tflint.hcl",
+			Dir:  "landing-zone",
+			Expected: []expectedIssue{
+				{"scaleway_resource_missing_tags", "info", `The resource is missing the following tags: "owner".`, "main.tf", 12, 28},
+				{"scaleway_instance_security_group_admin_port_exposed", "warning", "Inbound rule accepts administration port 22 from 0.0.0.0/0. Reach Instances through the Public Gateway SSH bastion or a VPN instead.", "main.tf", 14, 3},
+				{"scaleway_rdb_instance_public_endpoint", "warning", "The Database Instance has no private_network block, so it gets a public endpoint by default. Attach it to a Private Network.", "main.tf", 20, 1},
+				{"scaleway_rdb_instance_encryption_at_rest_disabled", "warning", "Encryption at rest is not enabled for this Database Instance. Set encryption_at_rest = true.", "main.tf", 20, 1},
+				{"scaleway_redis_cluster_public_endpoint", "warning", "The Redis cluster has no private_network block, so it is exposed on a public endpoint. Attach it to a Private Network.", "main.tf", 40, 1},
+				{"scaleway_lb_insecure_ssl_compatibility_level", "warning", "ssl_compatibility_level_old accepts TLS versions older than 1.2. Use ssl_compatibility_level_intermediate (the default) or ssl_compatibility_level_modern.", "main.tf", 52, 29},
+				{"scaleway_object_bucket_versioning_disabled", "warning", "Versioning is not enabled on this bucket. Add a versioning block with enabled = true.", "main.tf", 56, 1},
+				{"scaleway_iam_api_key_missing_expiration", "warning", "The API key never expires. Set expires_at and rotate the key before that date.", "main.tf", 69, 1},
+				{"scaleway_iam_policy_not_attached_to_group", "warning", "The policy is attached directly to an application. Attach it to an IAM group (group_id) and add the application to the group.", "main.tf", 74, 3},
+				{"scaleway_iam_policy_full_access", "warning", "AllProductsFullAccess grants every permission on every product. Use product-specific permission sets, such as InstancesFullAccess.", "main.tf", 79, 28},
+			},
+		},
 	}
 
 	for _, tc := range cases {
