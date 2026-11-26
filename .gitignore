@@ -1,0 +1,10 @@
+# Built plugin binary
+/tflint-ruleset-scaleway
+/tflint-ruleset-scaleway.exe
+
+# GoReleaser output
+/dist/
+
+# Terraform / TFLint working directories used by integration tests
+.terraform/
+.tflint.d/
