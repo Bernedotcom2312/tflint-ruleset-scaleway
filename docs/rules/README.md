@@ -10,4 +10,5 @@ These rules warn of possible errors that can occur at `terraform apply`. Rules m
 |[scaleway_k8s_pool_invalid_node_type](scaleway_k8s_pool_invalid_node_type.md)|Error|✔|
 |[scaleway_rdb_instance_invalid_node_type](scaleway_rdb_instance_invalid_node_type.md)|Error|✔|
 |[scaleway_redis_cluster_invalid_node_type](scaleway_redis_cluster_invalid_node_type.md)|Error|✔|
+|[scaleway_lb_invalid_type](scaleway_lb_invalid_type.md)|Error|✔|
 <!-- errors -->
