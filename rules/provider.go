@@ -11,4 +11,5 @@ var Rules = []tflint.Rule{
 	NewScalewayRedisClusterInvalidNodeTypeRule(),
 	NewScalewayLBInvalidTypeRule(),
 	NewScalewayK8sClusterInvalidCNIRule(),
+	NewScalewayRdbInstanceInvalidEngineRule(),
 }
