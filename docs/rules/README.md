@@ -26,7 +26,7 @@ These rules check the zones and regions used by Scaleway resources, data sources
 
 ## Best Practices
 
-These rules enforce best practices. They are disabled by default and must be enabled in `.tflint.hcl`.
+These rules enforce best practices, mostly from the Scaleway Landing Zone Framework (see [coverage](../landing-zone.md)). They are disabled by default and must be enabled in `.tflint.hcl`.
 
 |Name|Severity|Enabled|
 | --- | --- | --- |

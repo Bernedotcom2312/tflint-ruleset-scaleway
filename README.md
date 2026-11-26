@@ -44,6 +44,10 @@ resource "scaleway_rdb_instance" "preview" {
 }
 ```
 
+## Scaleway Landing Zone Framework
+
+Best practice rules follow the guidelines of the Scaleway Landing Zone Framework: default-deny security groups, no administration port exposed to the internet, databases in Private Networks with encryption at rest and backups, TLS 1.2+, bucket versioning, IAM least privilege and tagging. See [the coverage of the framework](docs/landing-zone.md) and the configuration that enables all of them.
+
 ## How it works
 
 Rules only read your configuration: no Scaleway credentials are needed to run them. Values that cannot be resolved statically (unknown variables, resource attributes) are skipped.

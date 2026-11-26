@@ -16,5 +16,18 @@ All notable changes to this project are documented in this file. The format is b
   - `scaleway_lb_invalid_type`
   - `scaleway_object_bucket_invalid_name`
 - Locality rules, enabled by default: `scaleway_invalid_zone`, `scaleway_invalid_region`.
-- Best practice rules, disabled by default: `scaleway_instance_security_group_inbound_default_policy`, `scaleway_rdb_instance_backup_disabled`.
+- Best practice rules following the Scaleway Landing Zone Framework, disabled by default:
+  - `scaleway_instance_security_group_inbound_default_policy`
+  - `scaleway_instance_security_group_admin_port_exposed`
+  - `scaleway_rdb_instance_public_endpoint`
+  - `scaleway_redis_cluster_public_endpoint`
+  - `scaleway_rdb_instance_encryption_at_rest_disabled`
+  - `scaleway_rdb_instance_backup_disabled`
+  - `scaleway_lb_insecure_ssl_compatibility_level`
+  - `scaleway_object_bucket_versioning_disabled`
+  - `scaleway_iam_api_key_missing_expiration`
+  - `scaleway_iam_policy_full_access`
+  - `scaleway_iam_policy_not_attached_to_group`
+  - `scaleway_resource_missing_tags`
+- Coverage of the Landing Zone Framework in `docs/landing-zone.md`.
 - `tools/catalog` to refresh the Scaleway catalog from the API.
