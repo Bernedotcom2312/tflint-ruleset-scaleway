@@ -1,0 +1,3 @@
+# Keep LF line endings on every platform: generated files are compared
+# byte for byte in tests, and Windows runners check out with CRLF otherwise.
+* text=auto eol=lf
