@@ -25,3 +25,12 @@ These rules check the zones and regions used by Scaleway resources, data sources
 |[scaleway_invalid_zone](scaleway_invalid_zone.md)|Warning|✔|
 |[scaleway_invalid_region](scaleway_invalid_region.md)|Warning|✔|
 <!-- localities -->
+
+## Best Practices
+
+These rules enforce best practices. They are disabled by default and must be enabled in `.tflint.hcl`.
+
+|Name|Severity|Enabled|
+| --- | --- | --- |
+|[scaleway_instance_security_group_inbound_default_policy](scaleway_instance_security_group_inbound_default_policy.md)|Warning||
+<!-- best-practices -->

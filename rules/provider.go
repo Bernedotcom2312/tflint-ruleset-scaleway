@@ -15,4 +15,5 @@ var Rules = []tflint.Rule{
 	NewScalewayInvalidZoneRule(),
 	NewScalewayInvalidRegionRule(),
 	NewScalewayObjectBucketInvalidNameRule(),
+	NewScalewayInstanceSecurityGroupInboundDefaultPolicyRule(),
 }
