@@ -14,3 +14,12 @@ These rules warn of possible errors that can occur at `terraform apply`. Rules m
 |[scaleway_k8s_cluster_invalid_cni](scaleway_k8s_cluster_invalid_cni.md)|Error|✔|
 |[scaleway_rdb_instance_invalid_engine](scaleway_rdb_instance_invalid_engine.md)|Error|✔|
 <!-- errors -->
+
+## Localities
+
+These rules check the zones and regions used by Scaleway resources, data sources and provider blocks.
+
+|Name|Severity|Enabled|
+| --- | --- | --- |
+|[scaleway_invalid_zone](scaleway_invalid_zone.md)|Warning|✔|
+<!-- localities -->

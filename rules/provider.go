@@ -12,4 +12,5 @@ var Rules = []tflint.Rule{
 	NewScalewayLBInvalidTypeRule(),
 	NewScalewayK8sClusterInvalidCNIRule(),
 	NewScalewayRdbInstanceInvalidEngineRule(),
+	NewScalewayInvalidZoneRule(),
 }
