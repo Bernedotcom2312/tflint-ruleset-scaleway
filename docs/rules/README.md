@@ -38,3 +38,4 @@ These rules enforce best practices. They are disabled by default and must be ena
 |[scaleway_rdb_instance_encryption_at_rest_disabled](scaleway_rdb_instance_encryption_at_rest_disabled.md)|Warning||
 |[scaleway_lb_insecure_ssl_compatibility_level](scaleway_lb_insecure_ssl_compatibility_level.md)|Warning||
 |[scaleway_iam_api_key_missing_expiration](scaleway_iam_api_key_missing_expiration.md)|Warning||
+|[scaleway_object_bucket_versioning_disabled](scaleway_object_bucket_versioning_disabled.md)|Warning||

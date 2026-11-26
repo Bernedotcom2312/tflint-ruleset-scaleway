@@ -23,4 +23,5 @@ var Rules = []tflint.Rule{
 	NewScalewayRdbInstanceEncryptionAtRestDisabledRule(),
 	NewScalewayLBInsecureSSLCompatibilityLevelRule(),
 	NewScalewayIAMAPIKeyMissingExpirationRule(),
+	NewScalewayObjectBucketVersioningDisabledRule(),
 }
