@@ -25,4 +25,5 @@ var Rules = []tflint.Rule{
 	NewScalewayIAMAPIKeyMissingExpirationRule(),
 	NewScalewayObjectBucketVersioningDisabledRule(),
 	NewScalewayIAMPolicyFullAccessRule(),
+	NewScalewayIAMPolicyNotAttachedToGroupRule(),
 }

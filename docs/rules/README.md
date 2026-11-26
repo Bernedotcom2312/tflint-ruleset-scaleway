@@ -40,3 +40,4 @@ These rules enforce best practices. They are disabled by default and must be ena
 |[scaleway_iam_api_key_missing_expiration](scaleway_iam_api_key_missing_expiration.md)|Warning||
 |[scaleway_object_bucket_versioning_disabled](scaleway_object_bucket_versioning_disabled.md)|Warning||
 |[scaleway_iam_policy_full_access](scaleway_iam_policy_full_access.md)|Warning||
+|[scaleway_iam_policy_not_attached_to_group](scaleway_iam_policy_not_attached_to_group.md)|Warning||
