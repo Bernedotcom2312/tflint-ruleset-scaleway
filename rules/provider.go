@@ -26,4 +26,5 @@ var Rules = []tflint.Rule{
 	NewScalewayObjectBucketVersioningDisabledRule(),
 	NewScalewayIAMPolicyFullAccessRule(),
 	NewScalewayIAMPolicyNotAttachedToGroupRule(),
+	NewScalewayResourceMissingTagsRule(),
 }

@@ -36,6 +36,8 @@ var (
 	k8sCNIs             = newSet(K8sCNIs, identity)
 	zones               = newSet(Zones, identity)
 	regions             = newSet(Regions, identity)
+	taggableResources   = newSet(TaggableResources, identity)
+	mapTaggedResources  = newSet(MapTaggedResources, identity)
 )
 
 // IsValidInstanceServerType reports whether t is a known Instance commercial type.
@@ -78,4 +80,15 @@ func IsValidZone(zone string) bool {
 // IsValidRegion reports whether region is a known Scaleway region.
 func IsValidRegion(region string) bool {
 	return regions.has(region)
+}
+
+// IsTaggableResource reports whether resourceType supports tags.
+func IsTaggableResource(resourceType string) bool {
+	return taggableResources.has(resourceType)
+}
+
+// HasMapTags reports whether the tags of resourceType are a map rather than
+// a list of strings.
+func HasMapTags(resourceType string) bool {
+	return mapTaggedResources.has(resourceType)
 }

@@ -28,6 +28,11 @@ func TestLookups(t *testing.T) {
 		{"zone unknown", IsValidZone, "fr-par-4", false},
 		{"region", IsValidRegion, "nl-ams", true},
 		{"region given a zone", IsValidRegion, "nl-ams-1", false},
+		{"taggable resource", IsTaggableResource, "scaleway_instance_server", true},
+		{"taggable framework resource", IsTaggableResource, "scaleway_block_volume", true},
+		{"resource without tags", IsTaggableResource, "scaleway_rdb_acl", false},
+		{"map tags", HasMapTags, "scaleway_object_bucket", true},
+		{"list tags", HasMapTags, "scaleway_k8s_cluster", false},
 	}
 
 	for _, tc := range cases {

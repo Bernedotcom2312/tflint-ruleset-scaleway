@@ -1,0 +1,72 @@
+package models
+
+// TaggableResources lists the Scaleway resources that support tags.
+//
+// Extracted from the schemas of terraform-provider-scaleway (November 2026).
+// Tags are a list of strings, except for resources listed in MapTaggedResources.
+var TaggableResources = []string{
+	"scaleway_autoscaling_group",
+	"scaleway_autoscaling_instance_group",
+	"scaleway_autoscaling_instance_template",
+	"scaleway_baremetal_server",
+	"scaleway_block_snapshot",
+	"scaleway_block_volume",
+	"scaleway_container",
+	"scaleway_container_namespace",
+	"scaleway_container_trigger",
+	"scaleway_datalab",
+	"scaleway_datawarehouse_deployment",
+	"scaleway_file_filesystem",
+	"scaleway_flexible_ip",
+	"scaleway_function",
+	"scaleway_function_namespace",
+	"scaleway_iam_application",
+	"scaleway_iam_group",
+	"scaleway_iam_policy",
+	"scaleway_iam_user",
+	"scaleway_inference_deployment",
+	"scaleway_inference_model",
+	"scaleway_instance_image",
+	"scaleway_instance_ip",
+	"scaleway_instance_placement_group",
+	"scaleway_instance_private_nic",
+	"scaleway_instance_security_group",
+	"scaleway_instance_server",
+	"scaleway_instance_snapshot",
+	"scaleway_instance_template",
+	"scaleway_instance_volume",
+	"scaleway_interlink_link",
+	"scaleway_interlink_routing_policy",
+	"scaleway_ipam_ip",
+	"scaleway_k8s_cluster",
+	"scaleway_k8s_pool",
+	"scaleway_kafka_cluster",
+	"scaleway_key_manager_key",
+	"scaleway_lb",
+	"scaleway_lb_ip",
+	"scaleway_messageq_deployment",
+	"scaleway_mongodb_instance",
+	"scaleway_object_bucket",
+	"scaleway_opensearch_deployment",
+	"scaleway_rdb_instance",
+	"scaleway_redis_cluster",
+	"scaleway_s2s_vpn_connection",
+	"scaleway_s2s_vpn_customer_gateway",
+	"scaleway_s2s_vpn_gateway",
+	"scaleway_s2s_vpn_routing_policy",
+	"scaleway_secret",
+	"scaleway_vpc",
+	"scaleway_vpc_connector",
+	"scaleway_vpc_ingress_rule",
+	"scaleway_vpc_private_network",
+	"scaleway_vpc_public_gateway",
+	"scaleway_vpc_public_gateway_ip",
+	"scaleway_vpc_route",
+	"scaleway_webhosting",
+}
+
+// MapTaggedResources lists the taggable resources whose tags are a map
+// (S3-compatible object tags) rather than a list of strings.
+var MapTaggedResources = []string{
+	"scaleway_object_bucket",
+}
