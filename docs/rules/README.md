@@ -34,3 +34,4 @@ These rules enforce best practices. They are disabled by default and must be ena
 |[scaleway_rdb_instance_backup_disabled](scaleway_rdb_instance_backup_disabled.md)|Warning||
 |[scaleway_instance_security_group_admin_port_exposed](scaleway_instance_security_group_admin_port_exposed.md)|Warning||
 |[scaleway_rdb_instance_public_endpoint](scaleway_rdb_instance_public_endpoint.md)|Warning||
+|[scaleway_redis_cluster_public_endpoint](scaleway_redis_cluster_public_endpoint.md)|Warning||
