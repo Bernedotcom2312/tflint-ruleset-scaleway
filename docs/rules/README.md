@@ -37,3 +37,4 @@ These rules enforce best practices. They are disabled by default and must be ena
 |[scaleway_redis_cluster_public_endpoint](scaleway_redis_cluster_public_endpoint.md)|Warning||
 |[scaleway_rdb_instance_encryption_at_rest_disabled](scaleway_rdb_instance_encryption_at_rest_disabled.md)|Warning||
 |[scaleway_lb_insecure_ssl_compatibility_level](scaleway_lb_insecure_ssl_compatibility_level.md)|Warning||
+|[scaleway_iam_api_key_missing_expiration](scaleway_iam_api_key_missing_expiration.md)|Warning||

@@ -22,4 +22,5 @@ var Rules = []tflint.Rule{
 	NewScalewayRedisClusterPublicEndpointRule(),
 	NewScalewayRdbInstanceEncryptionAtRestDisabledRule(),
 	NewScalewayLBInsecureSSLCompatibilityLevelRule(),
+	NewScalewayIAMAPIKeyMissingExpirationRule(),
 }
